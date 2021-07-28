@@ -1,0 +1,2073 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cda_styling.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:cda="urn:hl7-org:v3">
+	<realmCode code="US"/>
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<!-- US Realm Header template -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2014-06-09"/>
+	<!-- Birth Defects Event Report Document template -->
+	<templateId root="2.16.840.1.113883.10.14.1" extension="2014-27-10"/>
+	<!-- Globally unique identifier for the document  -->
+	<id extension="TT988" root="2.16.840.1.113883.19.5.44444.1"/>
+	<!-- Ambulatory report code & Title -->
+	<code code="75609-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Birth Defects Event Report For Ambulatory Providers"/>
+	<!-- Title of the document -->
+	<title>Birth Defects Events Registry Report (Ambulatory)</title>
+	<effectiveTime value="201602041030-0800"/>
+	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality"/>
+	<languageCode code="en-US"/>
+	<setId extension="sTT988" root="2.16.840.1.113883.19.5.44444.19"/>
+	<!-- Version of the document -->
+	<versionNumber value="1"/>
+	<!-- Below header tags need to be in order. Otherwise NIST throws error and doesn't specify the actual error. -->
+	<recordTarget>
+		<patientRole>
+			<id extension="444222222" root="2.16.840.1.113883.4.1"/>
+			<!-- Fake Social Security Number using the actual SSN OID. -->
+			<id extension="123456" root="2.16.840.1.113883.19.5.44444.2"/>
+			<!-- Fake ID using HL7 example OID. -->
+			<addr use="HP">
+				<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+				<streetAddressLine>1000 Home Depo</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>12368</postalCode>
+				<country>US</country>
+				<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+			</addr>
+			<telecom value="tel:(555)555-1212" use="HP"/>
+			<!-- HP is "primary home" from HL7 AddressUse 2.16.840.1.113883.5.1119 -->
+			<patient>
+				<name use="L">
+					<!-- L is "Legal" from HL7 EntityNameUse 2.16.840.1.113883.5.45 -->
+					<given>Baby</given>
+					<!-- CL is "Call me" from HL7 EntityNamePartQualifier 2.16.840.1.113883.5.43 -->
+					<family>Newborn</family>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+				<birthTime value="20160115"/>
+				<sdtc:deceasedInd value="false"/>
+				<!--BD Recon #9-->
+				<sdtc:multipleBirthInd value="false"/>
+				<!-- BD Recon #13 -->
+				<maritalStatusCode code="S" codeSystem="2.16.840.1.113883.5.2" codeSystemName="HL7v3 Marital Status Value Set" displayName="Never Married"/>
+				<religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystemName="HL7 Religious Affiliation" codeSystem="2.16.840.1.113883.5.1076"/>
+				<raceCode code="1966-1" displayName="Aleut" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<guardian classCode="GUARD">
+					<code code="MTH" displayName="mother" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code"/>
+					<addr use="HP">
+						<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+						<streetAddressLine>1357 Amber Drive</streetAddressLine>
+						<city>Beaverton</city>
+						<state>OR</state>
+						<postalCode>97867</postalCode>
+						<country>US</country>
+						<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+					</addr>
+					<telecom value="tel:(816)276-6909" use="HP"/>
+					<guardianPerson>
+						<name>
+							<given>Lady</given>
+							<family>Jones</family>
+						</name>
+					</guardianPerson>
+				</guardian>
+				<birthplace>
+					<place>
+						<addr use="HP">
+							<streetAddressLine>4444 Home Street</streetAddressLine>
+							<city>Beaverton</city>
+							<state>OR</state>
+							<postalCode>97867</postalCode>
+							<country>US</country>
+						</addr>
+					</place>
+				</birthplace>
+				<languageCommunication>
+					<languageCode code="en"/>
+					<modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+					<preferenceInd value="true"/>
+				</languageCommunication>
+			</patient>
+			<providerOrganization>
+				<id extension="219BX" root="1.1.1.1.1.1.1.1.2"/>
+				<name>The DoctorsTogether Physician Group</name>
+				<telecom use="WP" value="tel: +(555)-555-5000"/>
+				<addr use="WP">
+					<streetAddressLine>1007 Health Drive</streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="20130926145257-0400"/>
+		<assignedAuthor>
+			<id root="2.16.840.1.113883.4.6"/>
+			<code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101" displayName="Family Practice"/>
+			<addr use="WP">
+				<streetAddressLine>8762 STONERIDGE CT</streetAddressLine>
+				<streetAddressLine>STE 190</streetAddressLine>
+				<city>PASKENTA</city>
+				<state>CA</state>
+				<postalCode>96074</postalCode>
+				<country nullFlavor="NI"/>
+				<useablePeriod xsi:type="IVL_TS">
+					<low nullFlavor="NA"/>
+					<high nullFlavor="NA"/>
+				</useablePeriod>
+			</addr>
+			<telecom use="WP" value="(555) 570-4267"/>
+			<assignedPerson>
+				<name>
+					<given>EMORY</given>
+					<given>RAUL</given>
+					<family>WADDINGTON</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="2.16.840.1.113883.4.6" extension="321CX"/>
+				<name>Good Health HIE</name>
+				<telecom use="WP" value="tel:+1(555)555-1009"/>
+				<addr use="WP">
+					<streetAddressLine>311 Arsenal St</streetAddressLine>
+					<streetAddressLine nullFlavor="NI"/>
+					<city>Watertown</city>
+					<state>MA</state>
+					<postalCode>02472</postalCode>
+					<country nullFlavor="NI"/>
+					<useablePeriod xsi:type="IVL_TS">
+						<low nullFlavor="NA"/>
+						<high nullFlavor="NA"/>
+					</useablePeriod>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient>
+		<templateId root="1.3.6.1.4.1.19376.1.3.3.1.4"/>
+		<intendedRecipient>
+			<!-- <id extension='Organizational OID' root='OID'/> -->
+			<receivedOrganization>
+				<id extension="0000" root="1.3.6.1.4.1.19376.1.3.4"/>
+				<name>Organization Name</name>
+				<telecom value="tel:404-639-3535"/>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<participant typeCode="IND">
+		<!-- typeCode "IND" represents an individual -->
+		<associatedEntity classCode="PRS">
+			<!-- <associatedEntity classCode='AGNT|CAREGIVER|ECON|NOK|PRS'> -->
+			<!-- Example Mother's ID - Same ID should be used in subject too -->
+			<id extension="1234567890121" root="1.2.250.1.213.1.4.1"/>
+			<code code="MTH" codeSystem="2.16.840.1.113883.5.111" displayName="Mother"/>
+			<addr use="WP">
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom value="tel:(999)555-1212" use="WP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Mrs.</prefix>
+					<given>Lady</given>
+					<family>Jones</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<participant typeCode="IND">
+		<!-- typeCode "IND" represents an individual -->
+		<associatedEntity classCode="PRS">
+			<id extension="1234567890122" root="1.2.250.1.213.1.4.1"/>
+			<!-- Example Father's ID - Same ID should be used in subject too -->
+			<code code="FTH" displayName="Father" codeSystem="2.16.840.1.113883.1.11.19563" codeSystemName="Personal Relationship Role Type Value Set"/>
+			<addr use="WP">
+				<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+				<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+			</addr>
+			<telecom value="tel:(555)555-2006" use="WP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Mr.</prefix>
+					<given>Joshua</given>
+					<family>Jones</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<participant typeCode="IND">
+		<time xsi:type="IVL_TS">
+			<low value="19590101"/>
+			<high value="20111025"/>
+		</time>
+		<associatedEntity classCode="NOK">
+			<!-- <associatedEntity classCode='AGNT|CAREGIVER|ECON|NOK|PRS'> -->
+			<id root="1.4.3.2.3" extension="5545"/>
+			<code code="GRFTH" codeSystem="2.16.840.1.113883.5.111" displayName="Grandfather"/>
+			<addr use="WP">
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom value="tel:(999)555-1212" use="WP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Mr.</prefix>
+					<given>Frank</given>
+					<family>Jones</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<documentationOf>
+		<serviceEvent>
+			<effectiveTime>
+				<low value="20130926000000-0400"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<templateId root="2.16.840.1.113883.10.20.6.2.1"/>
+				<functionCode nullFlavor="NI" displayName="Primary Care Provider"/>
+				<assignedEntity>
+					<id root="2.16.840.1.113883.4.6" extension="16685390"/>
+					<code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101" displayName="Family Practice" codeSystemName="NUCC"/>
+					<addr use="WP">
+						<streetAddressLine>8762 STONERIDGE CT</streetAddressLine>
+						<streetAddressLine nullFlavor="NI"/>
+						<city>EL CAJON</city>
+						<state>CA</state>
+						<postalCode>92090</postalCode>
+						<country nullFlavor="NI"/>
+						<useablePeriod xsi:type="IVL_TS">
+							<low nullFlavor="NA"/>
+							<high nullFlavor="NA"/>
+						</useablePeriod>
+					</addr>
+					<telecom nullFlavor="NI"/>
+					<assignedPerson>
+						<name>
+							<given>ETHAN</given>
+							<family>NEWQUIST</family>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id root="3733dae9-2013-23a9-05d4-001A64958C30"/>
+						<name nullFlavor="NI"/>
+						<telecom nullFlavor="NI"/>
+						<!--<addr nullFlavor="NI"/>-->
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<componentOf>
+		<!-- This observation records the provider that referred the patient to the reporting facility. -->
+		<encompassingEncounter>
+			<id root="3733dae9-2013-b04b-05d4-001A64958C30"/>
+			<effectiveTime nullFlavor="NI"/>
+			<encounterParticipant typeCode="REF" nullFlavor="NA">
+				<assignedEntity>
+					<id root="2.16.840.1.113883.4.6"/>
+					<!--<addr nullFlavor="NI"/> -->
+					<telecom nullFlavor="NI"/>
+					<assignedPerson>
+						<name nullFlavor="NI"/>
+					</assignedPerson>
+				</assignedEntity>
+			</encounterParticipant>
+			<location>
+				<healthCareFacility>
+					<!-- Hospital report Facility oid -->
+					<id root="1.2.3.4.5.6.7.8.1"/>
+				</healthCareFacility>
+			</location>
+		</encompassingEncounter>
+	</componentOf>
+	<component>
+		<structuredBody>
+			<component>
+				<!-- Required Birth Defects Diagnosis Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.14.2" extension="2014-27-10"/>
+					<!--  Birth Defects Diagnosis section template  -->
+					<code code="77963-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Birth Defects Diagnosis"/>
+					<title>Birth Defects Diagnosis</title>
+					<text>
+						<content ID="Diagnosis_1">Sacral spina bifida with hydrocephalus – closed</content>
+						<table>
+							<thead>
+								<tr>
+									<th>Diagnosis Date</th>
+									<th>Primary Site</th>
+									<th>Laterality</th>
+									<th>Diagnostic Confirmation</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>01/30/2016</td>
+									<td ID="PrimarySite_1">Bone structure of spine</td>
+									<td ID="Laterality_1">Condition is not in a paired organ</td>
+									<td ID="Confirmation_1">CT Scan</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.14.3" extension="2014-27-10"/>
+							<!--    Birth Defects Diagnosis Concern Act template   -->
+							<id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern"/>
+							<!-- The statusCode represents the need to continue tracking the problem -->
+							<!-- This is of ongoing concern to the provider -->
+							<statusCode code="active"/>
+							<effectiveTime>
+								<!-- The low value represents when the problem was first recorded in the patient's chart -->
+								<!-- Concern was documented on July 6, 2013 -->
+								<low value="201601301145-0800"/>
+								<high nullFlavor="NA"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<!--      Birth Defect Diagnosis Observation  -->
+									<templateId root="2.16.840.1.113883.10.14.4" extension="2014-27-10"/>
+									<id root="5e0584ad-b4b0-421f-85f9-2c2c83c510cc"/>
+									<code code="29308-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosis"/>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="201601301145"/>
+										<high nullFlavor="NA"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="203951008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Sacral spina bifida with hydrocephalus – closed">
+										<originalText>
+											<reference value="#Diagnosis_1"/>
+										</originalText>
+										<qualifier>
+											<name code="78034-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Procedure that confirmed birth defect diagnosis"/>
+											<value xsi:type="CD" code="4" codeSystem="2.16.840.1.113883.10.14.90" codeSystemName="Birth Defects Diagnostic Confirmation" displayName="CT Scan">
+												<originalText>
+													<reference value="#Confirmation_1"/>
+												</originalText>
+											</value>
+										</qualifier>
+									</value>
+									<targetSiteCode xsi:type="CD" code="51282000" displayName="Bone structure of spine" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+										<originalText>
+											<reference value="#PrimarySite_1"/>
+										</originalText>
+										<qualifier>
+											<name code="20228-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Anatomic part Laterality"/>
+											<value xsi:type="CD" code="0" codeSystem="2.16.840.1.113883.10.14.92" codeSystemName="Birth Defects Laterality at Diagnosis" displayName="Condition is not in a paired organ">
+												<originalText>
+													<reference value="#Laterality_1"/>
+												</originalText>
+											</value>
+										</qualifier>
+									</targetSiteCode>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Problems Section - Birth Defects IG Specific Constraints -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.14.6" extension="2014-27-10"/>
+					<!--  Problems Section - Birth Defects IG Specific Constraints template  -->
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+					<title>Problems Section - Birth Defects IG Specific Constraints</title>
+					<text>
+						<list>
+							<item>Birth Defect related problem: hearing loss</item>
+						</list>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<!--	Problem Concern Act Template	-->
+							<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2014-06-09"/>
+							<!--	Birth Defect Problem Concern Act Template	-->
+							<templateId root="2.16.840.1.113883.10.14.7" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20130512"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ">
+								<!--	Birth Defects Problem Observation	-->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.8" extension="2014-27-10"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="75323-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Condition"/>
+									<!-- The statusCode reflects the status of the observation itself -->
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<!-- The low value reflects the date of onset -->
+										<!-- Based on patient symptoms, presumed onset is July 3, 2013 -->
+										<low value="20130703"/>
+										<!-- The high value reflects when the problem was known to be resolved -->
+										<!-- Based on signs and symptoms, appears to be resolved on Aug 14, 2013 -->
+										<high value="20080814"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="15188001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="hearing loss"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Required Newborn Delivery Information Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.14.17" extension="2014-27-10"/>
+					<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e30"/>
+					<!--  Newborn Delivery Information Section template  -->
+					<code code="57075-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Newborn delivery information from newborn Narrative"/>
+					<title>Newborn Delivery Information Section</title>
+					<text>
+						<list>
+							<item>Significant Birth Injury: Extradural hemorrhage in fetus or newborn</item>
+							<item>Admission to NICU: true</item>
+							<item>Place of Birth: Home birth</item>
+							<item>Infant Living: true</item>
+							<item>Newborn Given Surfactant Replacement: Beractant</item>
+						</list>
+					</text>
+					<entry typeCode="DRIV">
+						<!--  Significant Birth Injury   -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!--   Significant Birth Injury Template   -->
+							<templateId root="2.16.840.1.113883.10.14.85" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+							<code code="32386-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Significant Birth Injury"/>
+							<text>Significant Birth Injury</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20120215"/>
+							<value xsi:type="CD" code="206195009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Extradural hemorrhage in fetus or newborn"/>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<!--  Admission to NICU   -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!--   Admission to NICU Template   -->
+							<templateId root="2.16.840.1.113883.10.14.37" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e25"/>
+							<code code="305351004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Admission to intensive care unit"/>
+							<text/>
+							<statusCode code="completed"/>
+							<effectiveTime value="20120215"/>
+							<value xsi:type="BL" value="true"/>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<!--  Place of Birth   -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!--   Place of Birth Template   -->
+							<templateId root="2.16.840.1.113883.10.14.80" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+							<code code="73766-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Place where birth occurred"/>
+							<text>Place of Birth (type or birthing place)</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20130512"/>
+							<value xsi:type="CD" code="169813005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Home birth"/>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<!--  Infant Living   -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!--   Infant Living Template   -->
+							<templateId root="2.16.840.1.113883.10.20.26.28"/>
+							<code code="73757-7" displayName="Infant living at time of report" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<value xsi:type="BL" value="true"/>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<!--  Cause of Death -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.14.46" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e2a"/>
+							<code code="79378-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death"/>
+							<text>Cause of death - N/A</text>
+							<value xsi:type="CD" nullFlavor="NA"/>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<!--   Newborn Given Surfactant Replacement   -->
+						<observation classCode="OBS" moodCode="EVN">
+							<!--   Newborn Given Surfactant Replacement Template   -->
+							<templateId root="2.16.840.1.113883.10.14.94" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e30"/>
+							<code code="80902-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Surfactant Replacement Given"/>
+							<text>Newborn Given Surfactant Replacement</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20130512"/>
+							<value xsi:type="CD" code="40905005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Beractant"/>
+						</observation>
+					</entry>
+					<component>
+						<!--  Newborn Procedures Section  -->
+						<section>
+							<templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09"/>
+							<!--  Newborn Procedures Section template  -->
+							<templateId root="2.16.840.1.113883.10.14.18" extension="2014-27-10"/>
+							<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROCEDURES"/>
+							<title>Newborn Procedures Section</title>
+							<text>
+								<list>
+									<item>Assisted ventilation required immediately following delivery at right lung structure</item>
+									<item>Assisted ventilation required for more than six hours at right lung structure</item>
+									<item>Karyotype determination (procedure)</item>
+								</list>
+							</text>
+							<entry typeCode="DRIV">
+								<!--  Assisted Ventilation immediately following delivery Template  -->
+								<procedure classCode="PROC" moodCode="EVN">
+									<!--  Assisted Ventilation immediately following delivery Template  -->
+									<templateId root="2.16.840.1.113883.10.14.42" extension="2014-27-10"/>
+									<id root="d5b614bd-01ce-410d-8726-e1fd01dcc72a"/>
+									<code code="PHC1250" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Assisted ventilation required immediately following delivery">
+										<originalText>
+											<reference value="#Proc1"/>
+										</originalText>
+									</code>
+									<statusCode code="completed"/>
+									<effectiveTime value="20130512"/>
+									<targetSiteCode code="3341006" displayName="right lung structure (body structure)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+								</procedure>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--  Assisted Ventilation for 6 or more hours Template  -->
+								<procedure classCode="PROC" moodCode="EVN">
+									<!--  Assisted Ventilation for 6 or more hours Template  -->
+									<templateId root="2.16.840.1.113883.10.14.43" extension="2014-27-10"/>
+									<id root="d5b614bd-01ce-410d-8726-e1fd01dcc72a"/>
+									<code code="PHC1251" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Assisted ventilation required for more than six hours">
+										<originalText>
+											<reference value="#Proc1"/>
+										</originalText>
+									</code>
+									<statusCode code="completed"/>
+									<effectiveTime value="20130512"/>
+									<targetSiteCode code="3341006" displayName="right lung structure (body structure)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+								</procedure>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--  Karyotype Determination Template  -->
+								<procedure classCode="PROC" moodCode="EVN">
+									<!--  Karyotype Determination Template  -->
+									<templateId root="2.16.840.1.113883.10.14.59" extension="2014-27-10"/>
+									<id root="d5b614bd-01ce-410d-8726-e1fd01dcc72b"/>
+									<code code="312948004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Karyotype determination (procedure)">
+										<originalText>
+											<reference value="#Proc1"/>
+										</originalText>
+									</code>
+									<statusCode code="completed"/>
+									<effectiveTime value="20130512"/>
+								</procedure>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Newborn Problems Section   -->
+						<section>
+							<!--  Problem Section template  -->
+							<templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2014-06-09"/>
+							<!--  Newborn Problems Section template  -->
+							<templateId root="2.16.840.1.113883.10.14.19" extension="2014-27-10"/>
+							<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+							<title>Newborn Problems Section</title>
+							<text>
+								<list>
+									<item>Clonic seizure</item>
+									<item>Neonatal candida septicemia</item>
+								</list>
+							</text>
+							<entry typeCode="DRIV">
+								<!--  Newborn Problem Concern Act   -->
+								<act classCode="ACT" moodCode="EVN">
+									<!--  Problem Concern Act Template  -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2014-06-09"/>
+									<!--  Newborn Problem Concern Act Template   -->
+									<templateId root="2.16.840.1.113883.10.14.20" extension="2014-27-10"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern"/>
+									<text>Newborn Problem Concern Act</text>
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<!--		Seizure or Serious Neurologic Dysfunction     	-->
+											<templateId root="2.16.840.1.113883.10.14.84" extension="2014-10-27"/>
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e31"/>
+											<code code="75323-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Condition"/>
+											<text>Seizure or Serious Neurologic Dysfunction</text>
+											<!-- The statusCode reflects the status of the observation itself -->
+											<statusCode code="completed"/>
+											<effectiveTime value="20120215"/>
+											<value xsi:type="CD" code="6208003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Clonic seizure"/>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode="SUBJ">
+										<!--		Suspected Neonatal Sepsis     	-->
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.14.87" extension="2014-27-10"/>
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e25"/>
+											<code code="75323-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Condition"/>
+											<text>Suspected Neonatal Sepsis</text>
+											<statusCode code="completed"/>
+											<effectiveTime value="20120215"/>
+											<value xsi:type="CD" code="211420008" codeSystem="2.16.840.1.113883.6.96" displayName="Neonatal candida septicemia"/>
+										</observation>
+									</entryRelationship>
+								</act>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Newborn Vital Signs Section  -->
+						<section>
+							<!--  Newborn Vital Signs Section template  -->
+							<templateId root="2.16.840.1.113883.10.20.26.11"/>
+							<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="8716-3" displayName="Vital Signs"/>
+							<title>Vital Signs Section</title>
+							<text>
+								<list>
+									<item ID="InfantVitalSignsSection.1">
+										<!-- (Narrative Block: Unstructured)-->
+										<caption xsi:type="StrucDoc.Caption">Body Weight at Birth</caption>
+										<content>2980 Grams</content>
+									</item>
+								</list>
+							</text>
+							<entry>
+								<!--  Body weight at birth  -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.50"/>
+									<code code="8339-4" displayName="Body weight at birth" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="PQ" value="2980" unit="g"/>
+								</observation>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Newborn Medications Section  -->
+						<section>
+							<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
+							<templateId root="2.16.840.1.113883.10.20.22.2.1" extension="2014-06-09"/>
+							<!--  Newborn Medications Section template  -->
+							<templateId root="2.16.840.1.113883.10.14.24" extension="2014-27-10"/>
+							<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE"/>
+							<title>Newborn Medications</title>
+							<text>
+								Antibiotic: Acyclovir Injectable Solution
+							</text>
+							<entry typeCode="DRIV">
+								<!--   Antibiotics   -->
+								<substanceAdministration classCode="SBADM" moodCode="EVN">
+									<!--**MEDICATION ACTIVITY V2 ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+									<!--   Antibiotics Template   -->
+									<templateId root="2.16.840.1.113883.10.14.40" extension="2014-27-10"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<statusCode code="completed"/>
+									<!--<text/>-->
+									<effectiveTime xsi:type="IVL_TS">
+										<low value="20161501"/>
+									</effectiveTime>
+									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+										<period value="12" unit="h"/>
+									</effectiveTime>
+									<routeCode code="IM" codeSystem="2.16.840.1.113883.12.162" codeSystemName="Route of administration (HL7)" displayName="Intramuscular"/>
+									<consumable>
+										<manufacturedProduct classCode="MANU">
+											<manufacturedMaterial>
+												<!-- ** Medication information ** -->
+												<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+												<code code="377143" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Acyclovir Injectable Solution"/>
+											</manufacturedMaterial>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Assessments Section  -->
+						<section classCode="DOCSECT" moodCode="EVN">
+							<!--  Assessments Section template  -->
+							<templateId root="2.16.840.1.113883.10.20.22.2.8"/>
+							<templateId root="2.16.840.1.113883.10.20.26.9"/>
+							<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="51848-0" displayName="Assessment Note"/>
+							<title>Assessments</title>
+							<text>
+								<list>
+									<item>Apgar score at 1M : 6</item>
+									<item>Apgar score at 5M : 8</item>
+								</list>
+							</text>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.47"/>
+									<code code="9272-6" displayName="Score 1M post birth" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="INT" value="6"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.47"/>
+									<code code="9274-2" displayName="Score 5M post birth" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="INT" value="8"/>
+								</observation>
+							</entry>
+						</section>
+					</component>
+				</section>
+			</component>
+			<component>
+				<!-- Required Mother Information Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.14.88" extension="2015-15-09"/>
+					<id root="7c844c75-aa34-411c-b7bd-5e4a9f206e31"/>
+					<!--  Mother Information Section template  -->
+					<code code="79192-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Maternal information section"/>
+					<title>Mother Information Section</title>
+					<text>
+						Pregnancy Risk Factor: Diabetes mellitus
+					</text>
+					<subject>
+						<relatedSubject>
+							<!--  SSN of Mother or Guardian  _-->
+							<sdtc:id root="2.16.840.1.113883.4.1" extension="123456789"/>
+							<code code="MTH" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Mother"/>
+							<!--<addr> . . . </addr>-->
+							<addr use="HP">
+								<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+								<streetAddressLine>1357 Amber Drive</streetAddressLine>
+								<city>Beaverton</city>
+								<state>OR</state>
+								<postalCode>97867</postalCode>
+								<country>US</country>
+								<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+							</addr>
+							<telecom use="HP" value="tel:111-222-3333"/>
+							<subject>
+								<name>
+									<family>Lady</family>
+									<given>Jones</given>
+								</name>
+								<administrativeGenderCode code="F"/>
+								<birthTime value="19750501"/>
+								<sdtc:raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC"/>
+								<sdtc:ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC"/>
+							</subject>
+						</relatedSubject>
+					</subject>
+					<entry typeCode="DRIV">
+						<!--   Pregnancy Risk Factor   -->
+						<act classCode="ACT" moodCode="EVN">
+							<code/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!--   Pregnancy Risk Factor Template   -->
+									<templateId root="2.16.840.1.113883.10.20.26.44"/>
+									<code code="73775-9" displayName="Risk factors in this pregnancy" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="CD" code="73211009" displayName="Diabetes mellitus" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<component>
+						<!--  Labor and Delivery Events Section  -->
+						<section>
+							<!--  Labor and Delivery Events Section template  -->
+							<templateId root="2.16.840.1.113883.10.14.25" extension="2014-27-10"/>
+							<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e31"/>
+							<code code="57074-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Labor and Delivery Process"/>
+							<title>Labor and Delivery Events Section</title>
+							<text>
+								<list>
+									<item>Number of Fetal Deaths: 0</item>
+									<item>Maternal Morbidity: Third degree perineal tear during delivery with postnatal problem</item>
+									<item>Pregnancy Outcome: Live birth</item>
+								</list>
+							</text>
+							<entry typeCode="DRIV">
+								<!--   Plurality (The number of babies resulting from a single pregnancy)   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.81" extension="2014-27-10"/>
+									<!--    Number of Fetal Deaths template   -->
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="57722-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Birth plurality"/>
+									<text>Plurality (The number of babies resulting from a single pregnancy) </text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="INT" value="1"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--    Number of Fetal Deaths   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.73" extension="2014-27-10"/>
+									<!--    Number of Fetal Deaths template   -->
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="57062-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Births.stillborn"/>
+									<text>Number of Fetal Deaths</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="INT" value="0"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--    Maternal Morbidity: Admission to Intensive Care   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.61" extension="2014-27-10"/>
+									<code code="305351004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Admission to intensive care unit"/>
+									<text>Admission to respiratory intensive care unit</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="CD" code="183447000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Admission to respiratory intensive care unit"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--    Characteristics of Labor and Delivery: Meconium Staining   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.53" extension="2014-27-10"/>
+									<code code="249135009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Meconium Staining"/>
+									<text>Old meconium staining liquor</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="CD" code="249137001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Old meconium staining liquor (finding)"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--    Maternal Morbidity: [third or fourth degree] Perineal Laceration   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.62" extension="2014-27-10"/>
+									<code code="72145-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Perineal Laceration"/>
+									<text>Third degree perineal tear during delivery with postnatal problem</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="CD" code="199931001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Third degree perineal tear during delivery with postnatal problem"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--    Maternal Morbidity: Ruptured Uterus   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.64" extension="2014-27-10"/>
+									<!--    Maternal Morbidity: Ruptured Uterus template   -->
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="34430009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Ruptured uterus"/>
+									<text>Maternal Morbidity: Ruptured Uterus</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="CD" code="199931001" codeSystem="2.16.840.1.113883.96" codeSystemName="SNOMED CT" displayName="Third degree perineal tear during delivery with postnatal problem"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--    Pregnancy Outcome   -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.82" extension="2014-27-10"/>
+									<!--    Pregnancy Outcome template   -->
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="64710-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pregnancy Outcome"/>
+									<text>Pregnancy Outcome</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160115"/>
+									<value xsi:type="CD" code="281050002" codeSystem="2.16.840.1.113883.6.1" codeSystemName="SNOMED CT" displayName="Livebirth"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!-- onset of labor -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.32"/>
+									<code nullFlavor="NA"/>
+								</observation>
+							</entry>	
+							<component>
+								<!--    Procedures During Labor and Delivery Section -->
+								<section>
+									<!--  Procedures Section template  -->
+									<templateId root="2.16.840.1.113883.10.20.22.2.7" extension="2014-06-09"/>
+									<templateId root="2.16.840.1.113883.10.14.28" extension="2014-27-10"/>
+									<!--    Procedures During Labor and Delivery Section template   -->
+									<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROCEDURES"/>
+									<title>Procedures during Labor and Delivery Section</title>
+									<text>
+										<list>
+											<item>Performed Emergency cesarean hysterectomy</item>
+											<item>Local anesthetic sacral epidural block</item>
+											<item>Cerclage of cervix during pregnancy by vaginal approach</item>
+											<item>Obstetric Delivery method: 
+												<list>
+													<item>Fetal Presentation [at birth]: Breech</item>
+													<item>Final Route and Method of Delivery: Spontaneous vertex delivery</item>
+													<item>If cesarean, a trial of labor was attempted: false</item>
+												</list>
+											</item>
+										</list>
+									</text>
+									<entry typeCode="DRIV">
+										<!--  Maternal Morbidity Procedures  -->
+										<procedure classCode="PROC" moodCode="EVN" negationInd="false">
+											<!--  Maternal Morbidity Procedures Template  -->
+											<templateId root="2.16.840.1.113883.10.14.63" extension="2014-27-10"/>
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+											<code code="236987005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Emergency cesarean hysterectomy"/>
+											<text>Maternal Morbidity Procedures</text>
+											<statusCode code="completed"/>
+											<effectiveTime value="20160115"/>
+										</procedure>
+									</entry>
+									<entry typeCode="DRIV">
+										<!--  Characteristics of Labor and Delivery Procedures  -->
+										<procedure classCode="PROC" moodCode="EVN">
+											<!--  Characteristics of Labor and Delivery Procedures Template  -->
+											<templateId root="2.16.840.1.113883.10.14.47" extension="2014-27-10"/>
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e20"/>
+											<code code="180886007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Local anesthetic sacral epidural block"/>
+											<statusCode code="completed"/>
+											<effectiveTime>
+												<low value="20160114"/>
+												<high value="20160115"/>
+											</effectiveTime>
+										</procedure>
+									</entry>
+									<entry typeCode="DRIV">
+										<!--  Obstetric Procedures  -->
+										<procedure classCode="PROC" moodCode="EVN">
+											<!--  Obstetric Procedures Template  -->
+											<templateId root="2.16.840.1.113883.10.14.74" extension="2014-27-10"/>
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e19"/>
+											<code code="90442009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Cerclage of cervix during pregnancy by vaginal approach"/>
+											<text>Obstetric Procedures</text>
+											<statusCode code="completed"/>
+											<effectiveTime value="20160115"/>
+										</procedure>
+									</entry>
+									<entry typeCode="DRIV">
+										<!--  Obstetric Delivery Method  -->
+										<procedure classCode="PROC" moodCode="EVN">
+											<!--  Obstetric Delivery Method Template  -->
+											<templateId root="2.16.840.1.113883.10.14.68" extension="2014-27-10"/>
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e18"/>
+											<code code="57071-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Obstetric Delivery Method"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20160115"/>
+											<entryRelationship typeCode="COMP">
+												<!--		Fetal Presentation [at birth]   	-->
+												<observation classCode="OBS" moodCode="EVN">
+													<!--		Fetal Presentation [at birth]   	-->
+													<templateId root="2.16.840.1.113883.10.14.69" extension="2014-27-10"/>
+													<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e17"/>
+													<code code="73761-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Fetal presentation at birth [US Standard Certificate of Live Birth]"/>
+													<text>Fetal Presentation [at birth]</text>
+													<statusCode code="completed"/>
+													<effectiveTime value="20160115"/>
+													<value xsi:type="CD" code="18559007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Fetal Presentation at Birth- Breech"/>
+												</observation>
+											</entryRelationship>
+											<entryRelationship typeCode="COMP">
+												<!--		Final Route and Method of Delivery    	-->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.14.95" extension="2015-27-10"/>
+													<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e14"/>
+													<code code="73762-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Final route and method of delivery"/>
+													<statusCode code="completed"/>
+													<effectiveTime>
+														<low value="20120318"/>
+													</effectiveTime>
+													<value xsi:type="CD" code="302383004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Forceps delivery"/>
+												</observation>
+											</entryRelationship>
+											<entryRelationship typeCode="COMP">
+												<!--		Trial of Labor Attempted    	-->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.14.70" extension="2014-27-10"/>
+													<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e13"/>
+													<code code="73760-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="If cesarean, a trial of labor was attempted"/>
+													<statusCode code="completed"/>
+													<effectiveTime value="20120215"/>
+													<value xsi:type="BL" value="false"/>
+												</observation>
+											</entryRelationship>
+										</procedure>
+									</entry>
+								</section>
+							</component>
+							<component>
+								<!--    Medications During Labor and Delivery Section   -->
+								<section>
+									<templateId root="2.16.840.1.113883.10.14.29" extension="2014-27-10"/>
+									<!--    Medications During Labor and Delivery Section template   -->
+									<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use"/>
+									<title>Medications during Labor and Delivery</title>
+									<text>
+										Bupivacaine / Epinephrine Injectable Solution for anesthesia.
+									</text>
+									<entry>
+										<!--   Characteristics of Labor and Delivery Medications   -->
+										<substanceAdministration classCode="SBADM" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+											<templateId root="2.16.840.1.113883.10.14.49" extension="2014-27-10"/>
+											<!--   Characteristics of Labor and Delivery Medications template   -->
+											<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e12"/>
+											<statusCode code="completed"/>
+											<effectiveTime xsi:type="IVL_TS">
+												<low value="20160115"/>
+												<high value="20160115"/>
+											</effectiveTime>
+											<!--<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+												<period value="12" unit="h"/>
+											</effectiveTime> -->
+											<routeCode code="IM" codeSystem="2.16.840.1.113883.12.162" codeSystemName="RouteOfAdministration" displayName="Intramuscular"/>
+											<doseQuantity value="1"/>
+											<consumable>
+												<manufacturedProduct classCode="MANU">
+													<!-- ** Medication information ** -->
+													<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+													<id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+													<manufacturedMaterial>
+														<code code="374372" displayName="Bupivacaine / Epinephrine Injectable Solution" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"/>
+													</manufacturedMaterial>
+												</manufacturedProduct>
+											</consumable>
+										</substanceAdministration>
+									</entry>
+								</section>
+							</component>
+							<component>
+								<!--    Mother's Vital Signs Section   -->
+								<section classCode="DOCSECT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.14"/>
+									<!--    Mother's Vital Signs Section template   -->
+									<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="8716-3" displayName="Vital Signs"/>
+									<title>Mother's Vital Signs Section</title>
+									<text>
+										Body weight mother - at delivery: 175 lbs.
+									</text>
+									<entry typeCode="DRIV">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.26.46"/>
+											<code code="69461-2" displayName="Body weight mother -- at delivery" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+											<value xsi:type="PQ" value="175" unit="lb"/>
+										</observation>
+									</entry>
+								</section>
+							</component>
+						</section>
+					</component>
+					<component>
+						<!--  Social History Section (V2)  -->
+						<section>
+							<!--  Social History Section template  -->
+							<templateId root="2.16.840.1.113883.10.14.1.1.9.9" extension="2017-16-07"/>
+							<!--  Social History Section (V2) template  -->
+							<templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2014-06-09"/>
+							<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History"/>
+							<title>Social History</title>
+							<text>
+								<list>
+									<item>Alcoholic drinks per W: 12 drinks</item>
+									<item>Type of drug used during pregnancy: Acetyl Fentanyl</item>
+									<item>List of Maternal Exposures: Maternal drug exposure</item>
+								</list>
+							</text>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- Social history observation V2-->
+									<templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2014-06-09"/>
+									<id root="37f76c51-6411-4e1d-8a37-957fd49d2cef"/>
+									<code code="44940-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Alcoholic drinks per W"/>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20120215"/>
+									</effectiveTime>
+									<value xsi:type="PQ" value="12"/>
+								</observation>
+							</entry>
+							<entry>
+								<!--   Type of recreational drug used during pregnancy  -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.10" extension="2018-05-01"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="89495-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Drug use during pregnancy"/>
+									<text>Type of recreational drug used during pregnancy </text>
+									<effectiveTime>
+										<!-- The low value reflects the start date of the observation/value -->
+										<low value="20090214"/>
+										<!-- The high value reflects the end date of the observation/value -->
+										<high value="20090915"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="6DZ28538KS" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII" displayName="Acetyl Fentanyl"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<!--  List of maternal exposure-->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.14" extension="2017-16-07"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="89496-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Known exposure [Type] in Mother--during pregnancy"/>
+									<text>List of maternal exposure</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20120215"/>
+									<value xsi:type="CD" code="95606005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Maternal drug exposure">
+										<originalText xsi:type="ST">text</originalText>
+									</value>
+								</observation>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Prior Pregnancy History Section  -->
+						<section classCode="DOCSECT" moodCode="EVN">
+							<!--  Prior Pregnancy History Section template  -->
+							<templateId root="2.16.840.1.113883.10.20.26.12"/>
+							<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="57073-9" displayName="Prenatal events"/>
+							<title>Prior Pregnancy History Section</title>
+							<text>
+								<list>
+									<item>Date last live birth: 25 Nov 2010</item>
+									<item>Date last menstrual period: 01 Apr 2014</item>
+									<item>Number of births now living: 2</item>
+									<item>Number of live births now dead: 0</item>
+									<item>Other pregnancy outcomes: 0</item>
+									<item>Gestational age: 39 wk</item>
+								</list>
+							</text>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.20"/>
+									<code code="68499-3" displayName="Date last live birth" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="TS" value="20101125"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.33"/>
+									<code code="8665-2" displayName="Date last menstrual period" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="TS" value="20120401"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.36"/>
+									<code code="11638-4" displayName="Number of births now living" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="INT" value="2"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.38"/>
+									<code code="68496-9" displayName="Number of live births now dead" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="INT" value="0"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.40"/>
+									<code code="69043-8" displayName="Other pregnancy outcomes" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<effectiveTime nullFlavor="NA"/>
+									<value xsi:type="INT" value="0"/>
+								</observation>
+							</entry>
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.26.21"/>
+									<code code="11884-4" displayName="Gestational age" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="PQ" value="39" unit="wk"/>
+								</observation>
+							</entry>
+							<!-- Previous preterm birth -->
+							<entry typeCode="DRIV">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.24" extension="2017-16-07"/>
+									<code code="11637-6" displayName="Births.preterm" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<value xsi:type="INT" value="0"/>
+								</observation>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Nutrition Section  -->
+						<section>
+							<!--  Nutrition Section template  -->
+							<templateId root="2.16.840.1.113883.10.20.22.2.57"/>
+							<code code="61144-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diet and Nutrition"/>
+							<title>Nutrition Section</title>
+							<text>
+								<paragraph>Nutritional Status: well nourished</paragraph>
+								<paragraph>Nutrition Assessment: Dietary Requirements; low sodium diet, Dietary Intake, high carbohydrate diet; BMI 25-29 overweight </paragraph>
+								<paragraph>Nutritional Recommendations: BMI 22; Nutrition Education "Lean Meats"</paragraph>
+							</text>
+							<entry>
+								<!-- Nutritional Status Observation -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.124"/>
+									<id root="c12ecaaf-53f8-4593-8f79-359aeaa3948b"/>
+									<code code="75305-3" displayName="Nutrition status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>Nutritional Status</originalText>
+									</code>
+									<statusCode code="completed"/>
+									<effectiveTime value="20130512"/>
+									<value xsi:type="CD" code="248324001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="well nourished"/>
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- ** Nutritional Assessment observation** -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.138"/>
+											<id root="ab1791b0-5c71-11db-b0de-0800200c9a66"/>
+											<code code="75303-8" displayName="Nutrition assessment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20130512"/>
+											<value xsi:type="CD" code="437421000124105" displayName="Decreased sodium diet (regime/therapy)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<!--  Prenatal Testing and Surveillance Section  -->
+						<section>
+							<!--  Prenatal Testing and Surveillance Section template  -->
+							<templateId root="2.16.840.1.113883.10.14.1.1.9.6" extension="2017-16-07"/>
+							<!--  Prenatal Testing and Surveillance Section template  -->
+							<templateId root="2.16.840.1.113883.10.20.26.3"/>
+							<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="57078-8" displayName="Antenatal Testing and Surveillance Section"/>
+							<title>
+								Prenatal Testing and Surveillance Section
+							</title>
+							<text>
+								<list>
+									<item>Prenatal visits for this pregnancy: 8</item>
+									<item>Prenatal Diagnostic Test Performed:Prenatal ultrasound</item>
+									<item>Prenatal Diagnosis: Early congenital syphilis - latent</item>
+									<item>Crown rump length: 88 mm</item>
+									<item>foot length: 6.8 cm</item>
+								</list>
+							</text>
+							<entry>
+								<act classCode="ACT" moodCode="EVN" negationInd="true">
+									<templateId root="2.16.840.1.113883.10.20.26.42"/>
+									<code code="73776-7" displayName="No Prenatal Care" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<effectiveTime>
+										<low value="20120521"/>
+										<high value="20121218"/>
+									</effectiveTime>
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="68493-6" displayName="Prenatal visits for this pregnancy" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+											<value xsi:type="INT" value="8"/>
+										</observation>
+									</entryRelationship>
+								</act>
+							</entry>
+							<entry>
+								<!-- Prenatal DiagnosticTest -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.23" extension="2017-16-07"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="89497-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Prenatal Tests"/>
+									<text>Prenatal Diagnostic Test Performed</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20120215"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.840.1.113883.10.14.90" codeSystemName="Birth Defects Diagnostic Confirmation" displayName="Prenatal ultrasound"/>
+								</observation>
+							</entry>
+							<entry>
+								<!--  Prenatal Diagnosis  -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.22" extension="2017-16-07"/>
+									<id root="6c844c75-aa34-411c-b7bd-5e4a9f206e29"/>
+									<code code="89498-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Prenatal Diagnosis"/>
+									<text>Prenatal Diagnosis</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20120215"/>
+									<value xsi:type="CD" code="186833000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Early congenital syphilis - latent"/>
+								</observation>
+							</entry>
+							<entry>
+								<!-- 	Crown Rump Length -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.7" extension="2017-16-07"/>
+									<code code="276352009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Crown rump length"/>
+									<text>Crown rump length</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20120215"/>
+									<value xsi:type="PQ" value="85" unit="mm"/>
+								</observation>
+							</entry>
+							<entry>
+							<!-- foot length -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.14.1.1.10.9" extension="2017-16-07"/>
+									<code code="249815005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Foot Length"/>
+									<text>Narrative Text</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20120215"/>
+									<value xsi:type="PQ" value="6.8" unit="cm"/>
+								</observation>
+							</entry>
+						</section>
+					</component>
+					<!--    End of Mother Information Section -->
+				</section>
+			</component>
+			<component>
+				<!-- Required Father information Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.14.96" extension="2015-15-09"/>
+					<id root="6c844c75-aa34-411c-b7bd-5e4a9f206f29"/>
+					<!--  Father Information Section template  -->
+					<code code="80901-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Paternal information section"/>
+					<title>Father Information Section</title>
+					<text>
+							Male - white
+					</text>
+					<subject>
+						<relatedSubject>
+							<!--  Id same as the id in Father Participant or Guardian  _-->
+							<sdtc:id extension="1234567890122" root="1.2.250.1.213.1.4.1"/>
+							<!--<sdtc:id root="1.4.3.2.3" extension="5545"/>-->
+							<code code="FTH" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Father"/>
+							<addr use="HP">
+								<streetAddressLine>4444 Home Street</streetAddressLine>
+								<city>Beaverton</city>
+								<state>OR</state>
+								<postalCode>97867</postalCode>
+								<country>US</country>
+							</addr>
+							<telecom use="HP" value="tel:111-222-3333"/>
+							<subject>
+								<name>
+									<given>Joshua</given>
+									<family>Jones</family>
+								</name>
+								<administrativeGenderCode code="M"/>
+								<birthTime value="19900501"/>
+								<sdtc:raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC"/>
+								<sdtc:ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+							</subject>
+						</relatedSubject>
+					</subject>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Payers Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2014-06-09"/>
+					<!-- ******** Payers section template ******** -->
+					<code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payers"/>
+					<title>Insurance Providers</title>
+					<text>
+						<list>
+							<item>Medicaid #: 12345678</item>
+						</list>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="DEF">
+							<templateId root="2.16.840.1.113883.10.20.22.4.60" extension="2014-06-09"/>
+							<id root="1fe2cdd0-7aad-11db-9fe1-0800200c9a66"/>
+							<code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payment sources"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.61" extension="2014-06-09"/>
+									<id root="3e676a50-7aac-11db-9fe1-0800200c9a66"/>
+									<code code="2" displayName="Medicaid" codeSystem="2.16.840.1.113883.3.221.5" codeSystemName="Source of Payment Typology (PHDSC)"/>
+									<statusCode code="completed"/>
+									<performer typeCode="PRF">
+										<templateId root="2.16.840.1.113883.10.20.22.4.87"/>
+										<time>
+											<low nullFlavor="UNK"/>
+											<high nullFlavor="UNK"/>
+										</time>
+										<!-- The performer element shall be present to represent the payer of the coverage.  -->
+										<assignedEntity classCode="ASSIGNED">
+											<!-- The identity of the performer should be recorded in the id element.  -->
+											<id root="2.16.840.1.113883.19"/>
+											<code code="PAYOR" codeSystem="2.16.840.1.113883.5.110" codeSystemName="HL7 RoleCode"/>
+											<addr use="WP">
+												<streetAddressLine>123 Insurance Road</streetAddressLine>
+												<city>Blue Bell</city>
+												<state>MA</state>
+												<postalCode>02368</postalCode>
+												<country>US</country>
+												<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+											</addr>
+											<telecom value="tel:+(555)555-1515" use="WP"/>
+											<representedOrganization>
+												<name>Medicaid</name>
+												<telecom value="tel:+(555)555-1515" use="WP"/>
+												<addr use="WP">
+													<streetAddressLine>123 Insurance Road</streetAddressLine>
+													<city>Blue Bell</city>
+													<state>MA</state>
+													<postalCode>02368</postalCode>
+													<country>US</country>
+												</addr>
+											</representedOrganization>
+										</assignedEntity>
+									</performer>
+									<participant typeCode="COV">
+										<!-- member -->
+										<participantRole classCode="PAT">
+											<!-- The id element should contain the identifier of the patient with respect to the payer (the subscriber or member id) (medicaid #).  -->
+											<id root="14d4a520-7aae-11db-9fe1-0800200c9a66" extension="12345678"/>
+											<code code="SELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Self"/>
+										</participantRole>
+									</participant>
+								</act>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Results Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2014-06-09"/>
+					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESULTS"/>
+					<title>Results</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Procedure</th>
+									<th>Result Test</th>
+									<th>Result Value</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Congenital adrenal hyperplasia newborn screening panel</td>
+									<td>17-Hydroxyprogesterone [Mass/volume] in Dried blood spot</td>
+									<td>385 ng/mL</td>
+									<td>26 Jan 2016 8:30am</td>
+								</tr>
+								<tr>
+									<td>Congenital adrenal hyperplasia newborn screening panel</td>
+									<td>11-Deoxycortisol [Mass/volume] in Dried blood spot</td>
+									<td>3 ug/dL</td>
+									<td>28 Jan 2016 8:30am</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<!-- ** Result organizer ** -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2014-06-09"/>
+							<id root="7d5a02b0-67a4-11db-bd13-0800200c9a66"/>
+							<code code="57086-1" displayName="Congenital adrenal hyperplasia newborn screening panel" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="201626010830-0800"/>
+								<high value="201626010830-0800"/>
+							</effectiveTime>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- ** Result observation ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2014-06-09"/>
+									<id root="107c2dc0-67a5-11db-bd13-0800200c9a66"/>
+									<code code="38473-5" codeSystem="2.16.840.1.113883.6.1" displayName="17-Hydroxyprogesterone [Mass/volume] in Dried blood spot" codeSystemName="LOINC"/>
+									<text>
+										<reference value="#result1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201626010830-0800"/>
+									<value xsi:type="PQ" value="385" unit="ng/mL"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<author typeCode="AUT">
+										<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+										<time value="201626010830-0800"/>
+										<assignedAuthor>
+											<id extension="333444444" root="2.16.840.1.113883.4.6"/>
+											<code code="246Q00000X" displayName="Technician, Pathology" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- ** Result observation ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2014-06-09"/>
+									<id root="107c2dc0-67a5-11db-bd13-0800200c9a66"/>
+									<code code="53338-0" codeSystem="2.16.840.1.113883.6.1" displayName="11-Deoxycortisol [Mass/volume] in Dried blood spot" codeSystemName="LOINC"/>
+									<text>
+										<reference value="#result2"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201628010830-0800"/>
+									<value xsi:type="PQ" value="385" unit="ng/mL"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<author typeCode="AUT">
+										<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+										<time value="201628010830-0800"/>
+										<assignedAuthor>
+											<id extension="333444444" root="2.16.840.1.113883.4.6"/>
+											<code code="246Q00000X" displayName="Technician, Pathology" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Vital Signs Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.4" extension="2014-06-09"/>
+					<templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2014-06-09"/>
+					<code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS"/>
+					<title>Vital Signs</title>
+					<text>
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>Date / Time: </th>
+									<th>Jan 20, 2016</th>
+									<th>Feb 1, 2016</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>Height</th>
+									<td>
+										<content ID="vit1">20 cm</content>
+									</td>
+									<td>
+										<content ID="vit2">22 cm</content>
+									</td>
+								</tr>
+								<tr>
+									<th>Weight</th>
+									<td>
+										<content ID="vit3">5  kg</content>
+									</td>
+									<td>
+										<content ID="vit4">5.5  kg</content>
+									</td>
+								</tr>
+								<!-- Added 5/25/17 -->
+								<tr>
+									<th>Head Circumference</th>
+									<td>
+										<content ID="vit5">35 cm</content>
+									</td>
+									<td>
+										<content ID="vit6">35.2 cm</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.26" extension="2014-06-09"/>
+							<!-- Vital signs organizer template -->
+							<id root="c6f88320-67ad-11db-bd13-0800200c9a66"/>
+							<code code="74728-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs, weight, height, head circumference, oximetry, BMI, and BSA panel"/>
+							<statusCode code="completed"/>
+							<effectiveTime value="20160120"/>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09"/>
+									<!-- Vital Sign Observation template -->
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height"/>
+									<text>
+										<reference value="#vit1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160120"/>
+									<value xsi:type="PQ" value="20" unit="cm"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09"/>
+									<!-- Vital Sign Observation template -->
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Body Weight - Measured"/>
+									<text>
+										<reference value="#vit4"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160120"/>
+									<value xsi:type="PQ" value="5" unit="kg"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09"/>
+									<!-- Vital Sign Observation template -->
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="8287-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Head Circumference"/>
+									<text>
+										<reference value="#vit5"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160120"/>
+									<value xsi:type="PQ" value="35" unit="cm"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry typeCode="DRIV">
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.26" extension="2014-06-09"/>
+							<!-- Vital signs organizer template -->
+							<id root="c6f88320-67ad-11db-bd13-0800200c9a66"/>
+							<code code="74728-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs, weight, height, head circumference, oximetry, BMI, and BSA panel"/>
+							<statusCode code="completed"/>
+							<effectiveTime value="20160201"/>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09"/>
+									<!-- Vital Sign Observation template -->
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height"/>
+									<text>
+										<reference value="#vit2"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160201"/>
+									<value xsi:type="PQ" value="22" unit="cm"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09"/>
+									<!-- Vital Sign Observation template -->
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Body Weight - Measured"/>
+									<text>
+										<reference value="#vit4"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160201"/>
+									<value xsi:type="PQ" value="5.5" unit="kg"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09"/>
+									<!-- Vital Sign Observation template -->
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="8287-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Head Circumference"/>
+									<text>
+										<reference value="#vit6"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20160201"/>
+									<value xsi:type="PQ" value="35.2" unit="cm"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Procedures Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09"/>
+					<id root="3733daeb-2013-490e-05d4-001A64958C30"/>
+					<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Procedures</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Procedure</th>
+									<th>Age</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Repair of hypoplastic left heart syndrome (procedure)</td>
+									<td>3 days</td>
+									<td>Stage I Completed</td>
+								</tr>
+								<tr>
+									<td>Repair of hypoplastic left heart syndrome (procedure)</td>
+									<td>15 days</td>
+									<td>Stage II Active</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.840.1.113883.10.20.1.29"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+							<id root="3733daeb-2013-bb16-05d4-001A64958C30"/>
+							<code code="14257002" codeSystem="2.16.840.1.113883.6.96" displayName="Repair of hypoplastic left heart syndrome (procedure)">
+								<originalText>
+									<reference value="#Proc1"/>
+								</originalText>
+								<qualifier>
+									<name code="272741003" displayName="Laterality"/>
+									<value code="7771000" displayName="Left"/>
+								</qualifier>
+							</code>
+							<statusCode code="completed"/>
+							<effectiveTime value="20161801"/>
+							<participant typeCode="DEV">
+								<participantRole classCode="MANU">
+								</participantRole>
+							</participant>
+						</procedure>
+					</entry>
+					<entry typeCode="DRIV">
+						<procedure moodCode="INT" classCode="PROC">
+							<templateId root="2.16.840.1.113883.10.20.1.29"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+							<id root="3733daeb-2013-bb16-05d4-001A64958C30"/>
+							<code code="14257002" codeSystem="2.16.840.1.113883.6.96" displayName="Repair of hypoplastic left heart syndrome (procedure)">
+								<originalText>
+									<reference value="#Proc1"/>
+								</originalText>
+								<qualifier>
+									<name code="272741003" displayName="Laterality"/>
+									<value code="7771000" displayName="Left"/>
+								</qualifier>
+							</code>
+							<statusCode code="active"/>
+							<effectiveTime value="20163001"/>
+							<participant typeCode="DEV">
+								<participantRole classCode="MANU">
+								</participantRole>
+							</participant>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Medications Administered Section -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
+					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE"/>
+					<title>Medications</title>
+					<text>
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>Medication</th>
+									<th>Directions</th>
+									<th>Start Date</th>
+									<th>Status</th>
+									<th>Indications</th>
+									<th>Fill Instructions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Proventil 0.09 MG/ACTUAT inhalant solution</td>
+									<td>2 puffs q6 hours PRN wheezing</td>
+									<td>Jan 30, 2016</td>
+									<td>Active</td>
+									<td>Asthma</td>
+									<td>Generic Substitition Allowed</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- ** Medication Activity (V2) ** -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+							<id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
+							<statusCode code="active"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20163001"/>
+							</effectiveTime>
+							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+								<period value="6" unit="h"/>
+							</effectiveTime>
+							<routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="RESPIRATORY (INHALATION)"/>
+							<doseQuantity value="2"/>
+							<administrationUnitCode code="PUFF" displayName="Puff" codeSystem="2.16.840.1.113883.5.85" codeSystemName="orderableDrugForm"/>
+							<consumable>
+								<manufacturedProduct classCode="MANU">
+									<!-- ** Medication information ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+									<id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+									<manufacturedMaterial>
+										<code code="573621" displayName="Proventil 0.09 MG/ACTUAT inhalant solution" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"/>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Medication Factory Inc.</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<assignedEntity>
+									<id extension="5555555555" root="2.16.840.1.113883.4.6"/>
+									<!--<addr nullFlavor="UNK"/>-->
+									<telecom use="WP" value="tel: +1(555)555-1004"/>
+									<representedOrganization>
+										<id root="2.16.840.1.113883.19.5.9999.1393"/>
+										<name>Community Health and Hospitals</name>
+										<telecom use="WP" value="tel: +1(555)555-5000"/>
+										<!--<addr nullFlavor="UNK"/>-->
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<participant typeCode="CSM">
+								<participantRole classCode="MANU">
+									<!-- ** Drug vehicle ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.24"/>
+									<code code="412307009" displayName="drug vehicle" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96"/>
+									<playingEntity classCode="MMAT">
+										<code code="324049" displayName="Aerosol" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"/>
+										<name>Aerosol</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+							<precondition typeCode="PRCN">
+								<criterion>
+									<!-- ** Precondition for substance administration ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.25" extension="2014-06-09"/>
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+									<value xsi:type="CD" code="56018004" codeSystem="2.16.840.1.113883.6.96" displayName="Wheezing"/>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Cytogenetics Section -->
+				<section>
+					<!--  Test Details Section from Genetic Testing Report IG -->
+					<templateId root="2.16.840.1.113883.10.20.20.1.8"/>
+					<code code="55228-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cytogenetics study"/>
+					<title>Cytogenetics Section</title>
+					<text>
+						<list>
+							<item>Cytogenetic Analysis</item>
+							<item>Cytogenetic Techniques: G-banding</item>
+							<item>Karyotype</item>
+							<item>Result: Abnormal</item>
+						</list>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<!--  Clinical Genomic Statement Template -->
+							<templateId root="2.16.840.1.113883.10.20.20.2"/>
+							<!--  Clinical Genomic Statement Cytogenetics Template -->
+							<templateId root="2.16.840.1.113883.10.20.20.2.2"/>
+							<id root="2.16.840.1.113883.18.12.7.30.9.8.1"/>
+							<code code="62356-1" codeSystemName="LOINC" displayName="Chromosome analysis result in ISCN expression"/>
+							<statusCode code="completed"/>
+							<!-- The effective time below is based on the specimen collected time in the original ARUP report-->
+							<effectiveTime value="201621011213"/>
+							<value xsi:type="CD" code="47,XY,+21" codeSystemName="ISCN"/>
+							<methodCode code="LA14013-9" displayName="G-banding" codeSystemName="LOINC"/>
+							<!-- the follwoing observations are asscocited with the main gemomic observation and provide more information-->
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.20.2.2.2"/>
+									<code code="62361-1" codeSystemName="LOINC" displayName="Cells counted [#] in Blood or Tissue by Molecular genetics method"/>
+									<value xsi:type="INT" value="20"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.20.2.2.4"/>
+									<code code="62362-9" codeSystemName="LOINC" displayName="Colonies counted [#] in Blood or Tissue by Molecular genetics method"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.20.2.2.1"/>
+									<code code="62360-3" codeSystemName="LOINC" displayName="Cells analyzed [#] in Blood or Tissue by Molecular genetics method"/>
+									<value xsi:type="INT" value="10"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.20.2.2.3"/>
+									<code code="55199-4" codeSystemName="LOINC" displayName="Cells karyotyped.total [#] in Blood"/>
+									<value xsi:type="INT" value="10"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.20.2.2.5"/>
+									<code code="62358-7" codeSystemName="LOINC" displayName="ISCN band level"/>
+									<!-- the following code can be LOINC or ISCN-->
+									<value xsi:type="CD" code="LA14112-9" displayName="425" codeSystemName="LOINC"/>
+								</observation>
+							</entryRelationship>
+							<!-- interpretation of the variation observation (should consider if MFST=manifistation as the code here) -->
+							<entryRelationship typeCode="SPRT">
+								<observation classCode="OBS" moodCode="DEF">
+									<templateId root="2.16.840.1.113883.10.20.20.2.5.1"/>
+									<code code="62357-9" codeSystemName="LOINC" displayName="Chromosome analysis overall interpretation"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="201622011410"/>
+									<value xsi:type="CD" code="LA12748-2" displayName="Abnormal"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<component>
+						<!-- Specimen Section -->
+						<section>
+							<templateId root="2.16.840.1.113883.10.20.20.1.7"/>
+							<title>Specimen and Genomic Source Class</title>
+							<text>
+								<list>
+									<item>Peripheral Blood</item>
+									<item>Genomic source class: Germline</item>
+								</list>
+							</text>
+							<entry>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.20.3.2"/>
+									<id root="2.16.840.1.113883.18.12.7.30.9.3.7"/>
+									<code code="48002-0" codeSystemName="LOINC" displayName="Genomic source class"/>
+									<value xsi:type="CD" code="LA6683-2" codeSystemName="LOINC" displayName="Germline"/>
+									<specimen>
+										<templateId root="2.16.840.1.113883.10.20.20.3.1"/>
+										<specimenRole>
+											<specimenPlayingEntity>
+												<code code="180796014" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Peripheral blood specimen"/>
+											</specimenPlayingEntity>
+										</specimenRole>
+									</specimen>
+								</observation>
+							</entry>
+						</section>
+					</component>
+				</section>
+			</component>
+			<component>
+				<!-- Required if known Family History Section -->
+				<section>
+					<!-- *** Family history section (V2) *** -->
+					<templateId root="2.16.840.1.113883.10.20.22.2.15" extension="2014-06-09"/>
+					<code code="10157-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Family History</title>
+					<text>
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>Diagnosis</th>
+									<th>Age At Onset</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Myocardial Infarction (cause of death)</td>
+									<td>27</td>
+								</tr>
+								<tr>
+									<td>Diabetes</td>
+									<td>30</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<organizer moodCode="EVN" classCode="CLUSTER">
+							<!-- ** Family history organizer ** -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.45" extension="2014-06-09"/>
+							<id root="d42ebf70-5c89-11db-b0de-0855200c9a66"/>
+							<statusCode code="completed"/>
+							<subject>
+								<relatedSubject classCode="PRS">
+									<code code="FTH" displayName="Father" codeSystemName="FamilyRelationshipRoleType" codeSystem="2.16.840.1.113883.5.111">
+										<translation code="9947008" displayName="Biological father" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96"/>
+									</code>
+									<subject>
+										<sdtc:id root="2.16.840.1.113883.19.5.99999.2" extension="99999999"/>
+										<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male"/>
+										<birthTime value="1990"/>
+									</subject>
+								</relatedSubject>
+							</subject>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- ** Family history observation ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.46" extension="2014-06-09"/>
+									<id root="d42ebf70-5c89-11db-b0de-0800200c9a66"/>
+									<code code="75323-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Condition"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="2009"/>
+									<value xsi:type="CD" code="22298006" codeSystem="2.16.840.1.113883.6.96" displayName="Myocardial infarction"/>
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- ** Age observation ** -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.31"/>
+											<code code="445518008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Age At Onset"/>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="27" unit="a"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- ** Family history observation ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.46" extension="2014-06-09"/>
+									<id root="5bfe3ec0-5c8b-11db-b0de-0800200c9a66"/>
+									<code code="75323-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Condition"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="2012"/>
+									<value xsi:type="CD" code="44054006" codeSystem="2.16.840.1.113883.6.96" displayName="Diabetes mellitus type 2"/>
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- ** Age observation ** -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.31"/>
+											<code code="445518008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Age At Onset"/>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="30" unit="a"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- ******************* PLAN OF TREATMENT ********************** -->
+			<component>
+				<section nullFlavor="NA">
+					<!--  **** Plan of Treatment Section (V2) **** -->
+					<templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09"/>
+					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan"/>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
